@@ -28,7 +28,22 @@
         Сценарий: Правильно! Загаданное значенеи 56. Вы угадали с 4й попытки. 
     </pre>
     <script>
-        
+
+        let randomValue = Math.floor(Math.random() * 101);
+        let userNumber =  +prompt(" Загадай случайное значение от 0 до 100 введите любое значение");
+        for (let i = 0; i < 100; i++) {
+            if (randomValue == userNumber)  {
+                alert(` Правильно! Загаданное значенеи ${userNumber} . Вы угадали с ${i} й попытки.`);
+                break;
+            } else if (userNumber > randomValue) {
+                alert(` я загадал значение меньше чем ${userNumber} `);
+                continue;
+            } else if (userNumber < randomValue) {
+                alert(` я загадал значение больше чем ${userNumber} `);
+                continue;
+            }
+        }
+
     </script>
 </body>
 </html>

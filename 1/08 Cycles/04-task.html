@@ -11,12 +11,12 @@
         Запросите у пользователя число, посчитайте сумму всех числе между 0 и введенным значением и отобразите результат на экран.
     </pre>
     <script>
-        let sum;
-        let value = +prompt("Введите любое значение больше");
+        let sum = 0;
+        let value = +prompt("Введите любое значение");
         for (let i = 0; i <= value; i++) {
-            value -= i;
-            console.log(`${value}`);
+            sum += i;
         }
+        alert(`Сума = ${sum} `);
     </script>
 </body>
 </html>
