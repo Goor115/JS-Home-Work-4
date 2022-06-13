@@ -12,6 +12,22 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 1, 8, 0, 3];
+        let max = values[0];
+        let min = values[0];
+        let sum = 0;
+
+        for (let index = 0; index < values.length ; index++) {
+            const element = values[index];
+            if (element > max) {
+                max = element;
+            } else if (element < min) {
+                min = element;
+            }
+            sum += element;
+        }
+        console.log(`Максимальное значение массива ${max}`);
+        console.log(`Минимальное значение массива ${min}`);
+        console.log(`Сумма ${sum}`);
     </script>
 </body>
 </html>
