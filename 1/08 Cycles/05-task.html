@@ -30,26 +30,10 @@
     <script>
 
         let randomValue = Math.floor(Math.random() * 101);
-        let userNumber =  +prompt(" Загадай случайное значение от 0 до 100 введите любое значение");
+        let userNumber =0;
         let i = 0;
-
-        /*
-
-        for (let i = 0; i < 100; i++) {
-            if (randomValue == userNumber)  {
-                alert(` Правильно! Загаданное значенеи ${userNumber} . Вы угадали с ${i} й попытки.`);
-                break;
-            } else if (userNumber > randomValue) {
-                alert(` я загадал значение меньше чем ${userNumber} `);
-            } else if (userNumber < randomValue) {
-                alert(` я загадал значение больше чем ${userNumber} `);
-            } else {
-                alert(` Нужно числа `);
-            }
-        }
-*/
-
         while (randomValue !== userNumber) {
+            let userNumber =  +prompt(" Загадай случайное значение от 0 до 100 введите любое значение");
             if (userNumber > randomValue) {
                 alert(` я загадал значение меньше чем ${userNumber} `);
                 i++;
@@ -57,12 +41,9 @@
                 alert(` я загадал значение больше чем ${userNumber} `);
                 i++;
             } else {
-                alert(` Нужно числа `);
-                i++;
+                alert(` Правильно! Загаданное значенеи ${userNumber} . Вы угадали с ${i} й попытки.`);
             }
         }
-        alert(` Правильно! Загаданное значенеи ${userNumber} . Вы угадали с ${i} й попытки.`);
-
 
     </script>
 </body>
