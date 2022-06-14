@@ -12,8 +12,24 @@
         Выведите на экран только те элементы, которые больше этого среднего арифместического значения
     </pre>
     <script>
+        let sum = 0;
         let values = [10, 20, 48, 6, 11, 9, 125, 1, 8, 0, 3, 255, 77, 11, 170, 4, 28 ];
-        
+        let arr = [];
+        for (let index = 0; index < values.length; index++) {
+            const element = values[index];
+            sum += element;
+        }
+        let sumQ = sum / values.length ;
+        console.log( `Cреднее арифметическое ${sumQ}`);
+
+        for (let index = 0; index < values.length; index++) {
+            const element = values[index];
+            if (sumQ < element) {
+                arr.push(element);
+            }
+        }
+        console.log(`Єлементы больше этого среднего арифместического значения ${arr}`);
+
     </script>
 </body>
 </html>
