@@ -12,6 +12,27 @@
     </pre>
     <script>
         let values = [10, 20, 4, 6, 11, 9, 125, 10, 8, 0, 3, 5, 89, 12, 46, 77, 3];
+        let arr = [];
+
+        for (let i = 0; i < values.length; i++) {
+            const element = values[i];
+            for (let j = 0; j < i; j++) {
+                const element2 = values[j];
+                if (element === element2) {
+                    arr.push(element2);
+                }
+            }
+        }
+
+        /*let uniq = [];
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < i; j++)
+                if (arr[j] === arr[i]) {
+                    uniq.push(arr[i])
+                }
+        }
+        */
+        console.log(arr);
     </script>
 </body>
 </html>
